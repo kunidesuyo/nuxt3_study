@@ -8,7 +8,7 @@ const memberList = useState<Map<number, Member>>("memberList");
   <h1>会員管理</h1>
   <nav id="breadcrumbs">
     <ul>
-      <li>TOP</li>
+      <li><NuxtLink v-bind:to="{name: 'index'}">TOP</NuxtLink></li>
       <li>会員リスト</li>
     </ul>
   </nav>
@@ -22,7 +22,9 @@ const memberList = useState<Map<number, Member>>("memberList");
         <li
           v-for="[id, member] in memberList"
           v-bind:key="id">
-            IDが{{ id }}の{{ member.name }}さん
+            <NuxtLink v-bind:to="{name: 'member-memberDetail-id', params: {id: id}}">
+              IDが{{ id }}の{{ member.name }}さん
+            </NuxtLink>
         </li>
       </ul>
     </section>

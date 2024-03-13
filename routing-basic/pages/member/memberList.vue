@@ -15,7 +15,7 @@ const memberList = useState<Map<number, Member>>("memberList");
   <section>
     <h2>会員リスト</h2>
     <p>
-      新規登録はこちら
+      新規登録は<NuxtLink v-bind:to="{name: 'member-memberAdd'}">こちら</NuxtLink>から
     </p>
     <section>
       <ul>

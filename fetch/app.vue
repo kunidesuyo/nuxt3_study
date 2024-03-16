@@ -33,7 +33,7 @@ useState<Map<number, City>>(
 
 <template>
   <header>
-    <h1>useFetchサンプル</h1>
+    <h1>useLazyAsyncDataサンプル</h1>
   </header>
   <main>
     <NuxtPage/>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import type {Member} from "@/interfaces";
 definePageMeta({
-  layout: "member"
+  layout: "member",
+  middleware: ["loggedin-check"]
 })
 
 const router = useRouter();
